@@ -1,2 +1,2 @@
 # kasm_mtc_docker-images
-Fichier Dockerfiles et script nécessaire à la constructions d'images Workspace KASM
+Fichier Dockerfiles et scripts nécessaires à la construction d'images Workspace KASM
