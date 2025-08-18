@@ -31,6 +31,7 @@ COPY ./src/ubuntu/install/misc/custom_startup.sh $STARTUPDIR/custom_startup.sh
 
 # Run installations
 RUN \
+  chmod +x $STARTUPDIR/custom_startup.sh && \
   for SCRIPT in $INST_SCRIPTS; do \
     bash ${INST_DIR}${SCRIPT} || exit 1; \
   done && \
