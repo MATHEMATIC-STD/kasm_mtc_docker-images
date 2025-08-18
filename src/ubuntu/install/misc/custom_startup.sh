@@ -26,7 +26,7 @@ fi
 
 # Mount the share
 if [ -n "${SMB_SERVER}" ] && [ -n "${SMB_SHARE}" ]; then
-    mount -t cifs "//${SMB_SERVER}/${SMB_SHARE}" "${SMB_MOUNT_POINT}" -o "${MOUNT_OPTIONS}"
+    sudo mount -t cifs "//${SMB_SERVER}/${SMB_SHARE}" "${SMB_MOUNT_POINT}" -o "${MOUNT_OPTIONS}"
     
     # Verify mount success
     if ! mountpoint -q "${SMB_MOUNT_POINT}"; then
