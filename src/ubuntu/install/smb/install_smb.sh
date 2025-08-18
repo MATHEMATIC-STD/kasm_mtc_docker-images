@@ -2,7 +2,7 @@
 ### every exit != 0 fails the script
 set -ex
 apt-get update
-apt-get install -y gvfs-backends gvfs-bin gvfs-common gvfs-fuse smbclient
+apt-get install -y gvfs gvfs-backends gvfs-common gvfs-fuse smbclient
 
 cat >/etc/samba/smb.conf <<EOL
 #
