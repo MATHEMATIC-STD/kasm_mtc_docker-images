@@ -47,7 +47,13 @@ EOL
 mkdir -p /etc/opt/chrome/policies/
 mkdir -p /etc/brave
 ln -s /etc/opt/chrome/policies /etc/brave/policies
-mkdir -p /etc/brave/policies/managed/ 
+mkdir -p /etc/brave/policies/managed/
+
+# Copy Kasm MTC custom brave policy
+if [ -f $INST_DIR/ubuntu/install/brave/brave_policy.json ]; then
+    cp $INST_DIR/ubuntu/install/brave/brave_policy.json /etc/brave/policies/managed/
+fi
+ 
 cat >>/etc/brave/policies/managed/default_managed_policy.json <<EOL
 {"CommandLineFlagSecurityWarningsEnabled": false, "DefaultBrowserSettingEnabled": false}
 EOL
