@@ -37,6 +37,7 @@ RUN \
   for SCRIPT in $INST_SCRIPTS; do \
     bash ${INST_DIR}${SCRIPT} || exit 1; \
   done && \
+  mkdir -p /mnt/SAS && \
   bash ${INST_DIR}/ubuntu/install/misc/single_app_security.sh -t && \
   $STARTUPDIR/set_user_permission.sh $HOME && \
   rm -f /etc/X11/xinit/Xclients && \
