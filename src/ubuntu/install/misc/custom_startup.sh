@@ -1,6 +1,25 @@
 #!/usr/bin/env bash
 set -ex
 
+# --- Staging Area for Mapped Files ---
+# Copy user-provided config files from a staging area to the home directory,
+# overwriting the defaults from the image. This runs after Kasm's profile init.
+STAGING_DIR="/kasm_staging"
+if [ -d "$STAGING_DIR" ]; then
+    # Copy Conky config if it exists
+    if [ -f "$STAGING_DIR/.conkyrc" ]; then
+        cp "$STAGING_DIR/.conkyrc" "$HOME/.conkyrc"
+        echo "Custom .conkyrc applied."
+    fi
+
+    # Copy Welcome Message if it exists
+    if [ -f "$STAGING_DIR/.welcome_message.txt" ]; then
+        cp "$STAGING_DIR/.welcome_message.txt" "$HOME/.welcome_message.txt"
+        echo "Custom .welcome_message.txt applied."
+    fi
+fi
+
+
 # --- Display Welcome Message ---
 WELCOME_MSG_FILE="$HOME/.welcome_message.txt"
 if [ -f "$WELCOME_MSG_FILE" ]; then
