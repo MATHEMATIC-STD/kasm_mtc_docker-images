@@ -23,6 +23,8 @@ ENV DEBIAN_FRONTEND=noninteractive \
                   /ubuntu/install/discord/install_discord.sh \
                   /ubuntu/install/gtk/install_restricted_file_chooser.sh \
                   /ubuntu/install/misc/configure_thunar.sh \
+                  /ubuntu/install/misc/set_wallpaper.sh \
+                  /ubuntu/install/misc/customize_xfce_menu.sh \
                   /ubuntu/install/cleanup/cleanup.sh"
 
 # Copy install scripts
