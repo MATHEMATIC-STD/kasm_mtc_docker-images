@@ -24,6 +24,8 @@ ENV DEBIAN_FRONTEND=noninteractive \
                   /ubuntu/install/misc/configure_thunar.sh \
                   /ubuntu/install/misc/set_wallpaper.sh \
                   /ubuntu/install/misc/customize_xfce_menu.sh \
+                  /ubuntu/install/conky/install_conky.sh \
+                  /ubuntu/install/misc/install_welcome_message.sh \
                   /ubuntu/install/cleanup/cleanup.sh"
 
 # Copy install scripts

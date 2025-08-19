@@ -1,0 +1,2 @@
+Cet environnement est isolé et sécurisé.
+Il vous permet de naviguer sur internet et d'accéder au stockage SAS.
